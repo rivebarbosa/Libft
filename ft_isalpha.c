@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rrivelin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: roberto <roberto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 11:09:41 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/07/25 11:09:44 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/11 14:03:25 by roberto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	if (str[i] == '\0')
-	{
-		return (1);
-	}
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z'))
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
+int	ft_isalpha(int c)
+{
+	return(((c >= 'A') && (c <= 'Z'))
+	|| ((c >= 'a') && (c <= 'z')));
 }
