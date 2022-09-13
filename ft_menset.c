@@ -1,8 +1,20 @@
-# include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_menset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/13 20:18:57 by rrivelin          #+#    #+#             */
+/*   Updated: 2022/09/13 20:19:21 by rrivelin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_memset(void *s, int c, size_t n)
 {
-	char *a;
+	char	*a;
 
 	a = (char *) s;
 	while (n--)
@@ -10,6 +22,4 @@ void	ft_memset(void *s, int c, size_t n)
 		*a++ = (char) c;
 	}
 	return (s);
-
-	
 }

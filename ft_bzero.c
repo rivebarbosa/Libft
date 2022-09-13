@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roberto <roberto@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 13:00:40 by roberto           #+#    #+#             */
-/*   Updated: 2022/09/11 13:18:53 by roberto          ###   ########.fr       */
+/*   Updated: 2022/09/13 20:29:22 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    bzero(void *s, size_t n)
+void	bzero(void *s, size_t n)
 {
-    int    *cln;
+	int	*cln;
 
-    cln = s;
-    while (n != 0)
-    {
-        *cln++ = 0;
-        n--;
-    }
+	cln = s;
+	while (n != 0)
+	{
+		*cln++ = 0;
+		n--;
+	}
 }
