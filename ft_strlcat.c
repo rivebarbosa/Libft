@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 21:22:55 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/09/13 19:40:34 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/13 19:41:20 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	int	j;
 
 	j = 0;
-	size_count = ft_strlen(src);
+	size_count = ft_strlen(dst);
 	while (src[j] != '\0' && j < (size - 1))
 	{
-		*dst++ = *src++;
+		dst[size_count++] = src[j];
 		j++;
 	}
 	dst[size_count] = '\0';
@@ -33,8 +33,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 // int main ()
 // {
-//     char    source[6] = "teste";
-//     char    destination[6] = "";
+//     char    source[4] = "123";
+//     char    destination[9] = "teste";
 //     int    size;
 
 //     size = 6;

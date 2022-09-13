@@ -16,7 +16,7 @@ int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
 int	ft_isascii(int c);
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 int		ft_isprint(int ch);
 int		ft_toupper(int ch);
 int		ft_tolower(int ch);
