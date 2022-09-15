@@ -6,7 +6,7 @@
 #    By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/12 19:58:03 by rrivelin          #+#    #+#              #
-#    Updated: 2022/09/12 19:58:07 by rrivelin         ###   ########.fr        #
+#    Updated: 2022/09/14 19:13:44 by rrivelin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,3 +94,40 @@ fclean: clean
 re: clean all
 
 .PHONY: bonus all clean fclean re
+===============================================
+
+
+NAME = libft.a
+SRCS =  ft_isalnum.c \
+        ft_isalpha.c \
+        ft_isascii.c \
+        ft_isdigit.c \
+        ft_isprint.c \
+        ft_tolower.c \
+        ft_toupper.c \
+        ft_strlen.c \
+        ft_strncmp.c \
+        ft_strchr.c \
+        ft_strrchr.c \
+        ft_memset.c \
+		
+INCLUDEH = .
+OBJS = $(patsubst %.c, %.o, $(SRCS)) #trocando um certo padrão pór outro (.c por .o em todos os arquivos do SRCS)
+CFLAGS = -Wall -Wextra -Werror
+
+all : $(NAME)
+
+$(NAME) : $(OBJS)
+    @ar rcs $(NAME) $(OBJS) 
+
+#o "s" cria um indice para os arquivos, e agiliza o processo de likagem
+$(OBJS) : $(SRCS) libft.h
+    @cc $(CFLAGS) -c $(SRCS) -I $(INCLUDEH) 
+
+clean : 
+    @rm -f $(OBJS)
+
+fclean : clean
+    @rm -f $(NAME)
+
+re : fclean all
