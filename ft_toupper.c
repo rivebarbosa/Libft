@@ -6,24 +6,20 @@
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 20:54:43 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/09/13 20:56:45 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/15 20:51:39 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_toupper(char *str)
+int	ft_tolower(int c)
 {
-	int	i;
+	return ((65 <= c) && (90 >= c));
+}
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = str[i] - 32;
-		}
-		i++;
-	}
-	return (str);
+int	ft_toupper(int c)
+{
+	if (ft_tolower(c))
+		return (c - 32);
+	return (c);
 }

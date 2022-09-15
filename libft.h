@@ -17,10 +17,10 @@ int	ft_isdigit(int c);
 int	ft_isalnum(int c);
 int	ft_isascii(int c);
 size_t	ft_strlen(const char *str);
-char	*ft_toupper(char *str);
-char	*ft_tolower(char *str);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
 char	*ft_strdup(const char *str);
-void	ft_memset(void *s, int c, size_t n);
+void	*ft_memset(void *dest, int c, size_t n);
 void	*ft_calloc(size_t number, size_t size);	
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -39,4 +39,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+
 #endif

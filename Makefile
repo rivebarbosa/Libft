@@ -6,7 +6,7 @@
 #    By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/12 19:58:03 by rrivelin          #+#    #+#              #
-#    Updated: 2022/09/14 19:13:44 by rrivelin         ###   ########.fr        #
+#    Updated: 2022/09/15 19:43:01 by rrivelin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,53 +17,23 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 
-FILES = ft_memset \
-		ft_bzero \
-		ft_memcpy \
-		ft_memccpy \
-		ft_memmove \
-		ft_memchr \
-		ft_memcmp \
-		ft_strlen \
-		ft_strlcpy \
-		ft_strlcat \
-		ft_strchr \
-		ft_strrchr \
-		ft_strnstr \
-		ft_strncmp \
-		ft_atoi \
-		ft_isalpha \
-		ft_isdigit \
-		ft_isalnum \
-		ft_isascii \
-		ft_isprint \
-		ft_toupper \
-		ft_tolower \
-		ft_calloc \
-		ft_strdup \
-		ft_substr \
-		ft_strjoin \
-		ft_strtrim \
-		ft_split \
-		ft_itoa \
-		ft_strmapi \
-		ft_putchar_fd \
-		ft_putstr_fd \
-		ft_putendl_fd \
-		ft_putnbr_fd \
-		ft_strtok \
-		ft_strcmp \
-		get_next_line \
-
-FILES_B = 	ft_lstnew \
-	  		ft_lstadd_front \
-	  		ft_lstsize \
-	  		ft_lstlast \
-	  		ft_lstadd_back \
-	  		ft_lstdelone \
-	  		ft_lstclear \
-	  		ft_lstiter \
-	  		ft_lstmap
+FILES = ft_atoi \
+        ft_bzero \
+        ft_calloc \
+        ft_isalnum \
+        ft_isalpha \
+        ft_isascii \
+        ft_isdigit \
+        ft_isprint \
+        ft_itoa \
+        ft_memcpy \
+        ft_memmove \
+        ft_memset \
+        ft_strlcat \
+        ft_strlcpy \
+        ft_strlen \
+        ft_tolower \
+        ft_toupper \
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
@@ -94,40 +64,40 @@ fclean: clean
 re: clean all
 
 .PHONY: bonus all clean fclean re
-===============================================
+# ===============================================
 
 
-NAME = libft.a
-SRCS =  ft_isalnum.c \
-        ft_isalpha.c \
-        ft_isascii.c \
-        ft_isdigit.c \
-        ft_isprint.c \
-        ft_tolower.c \
-        ft_toupper.c \
-        ft_strlen.c \
-        ft_strncmp.c \
-        ft_strchr.c \
-        ft_strrchr.c \
-        ft_memset.c \
+# NAME = libft.a
+# SRCS =  ft_isalnum \
+#         ft_isalpha \
+#         ft_isascii \
+#         ft_isdigit \
+#         ft_isprint \
+#         ft_tolower \
+#         ft_toupper \
+#         ft_strlen.\
+#         ft_strncmp \
+#         ft_strchr\
+#         ft_strrchr \
+#         ft_memset \
 		
-INCLUDEH = .
-OBJS = $(patsubst %.c, %.o, $(SRCS)) #trocando um certo padrão pór outro (.c por .o em todos os arquivos do SRCS)
-CFLAGS = -Wall -Wextra -Werror
+# INCLUDEH = .
+# OBJS = $(patsubst %.c, %.o, $(SRCS)) #trocando um certo padrão pór outro (.c por .o em todos os arquivos do SRCS)
+# CFLAGS = -Wall -Wextra -Werror
 
-all : $(NAME)
+# all : $(NAME)
 
-$(NAME) : $(OBJS)
-    @ar rcs $(NAME) $(OBJS) 
+# $(NAME) : $(OBJS)
+#     @ar rcs $(NAME) $(OBJS) 
 
-#o "s" cria um indice para os arquivos, e agiliza o processo de likagem
-$(OBJS) : $(SRCS) libft.h
-    @cc $(CFLAGS) -c $(SRCS) -I $(INCLUDEH) 
+# #o "s" cria um indice para os arquivos, e agiliza o processo de likagem
+# $(OBJS) : $(SRCS) libft.h
+#     @cc $(CFLAGS) -c $(SRCS) -I $(INCLUDEH) 
 
-clean : 
-    @rm -f $(OBJS)
+# clean : 
+#     @rm -f $(OBJS)
 
-fclean : clean
-    @rm -f $(NAME)
+# fclean : clean
+#     @rm -f $(NAME)
 
-re : fclean all
+# re : fclean all

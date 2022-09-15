@@ -6,7 +6,7 @@
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 13:28:01 by roberto           #+#    #+#             */
-/*   Updated: 2022/09/13 20:27:54 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/15 20:19:50 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	*ft_calloc(size_t nmenb, size_t size)
 	pos = malloc(tot_size);
 	if (!pos || (tot_size > __INT_MAX__))
 		return (NULL);
-	ft_menset(pos, fill_byte, tot_size);
+	ft_memset(pos, fill_byte, tot_size);
 	return ((void *)pos);
 }

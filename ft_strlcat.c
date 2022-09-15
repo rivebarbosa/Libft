@@ -6,7 +6,7 @@
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 21:22:55 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/09/13 19:41:20 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:55:39 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	int	size_count;
-	int	j;
+	size_t	j;
 
 	j = 0;
 	size_count = ft_strlen(dst);

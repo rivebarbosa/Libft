@@ -6,7 +6,7 @@
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 20:01:00 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/09/13 20:02:22 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:51:37 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (n--)
 	{
 		*d++ = *s++;
-		return (dest);
 	}
+	return (dest);
 }
