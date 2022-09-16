@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 21:22:55 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/09/16 18:56:17 by rrivelin         ###   ########.fr       */
+/*   Created: 2022/09/16 20:15:07 by rrivelin          #+#    #+#             */
+/*   Updated: 2022/09/16 20:15:19 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	int		size_count;
-	size_t	j;
+	char	*s_dup;
+	size_t	s_dup_size;
 
-	j = 0;
-	size_count = ft_strlen(src);
-	while (src[j] != '\0' && j < (size - 1))
-	{
-		*dst++ = *src++;
-		j++;
-	}
-	dst[size_count] = '\0';
-	return (size_count);
+	s_dup_size = ft_strlen(s) + 1;
+	s_dup = ft_calloc(s_dup_size, sizeof(*s_dup));
+	if (s_dup)
+		ft_memcpy(s_dup, s, s_dup_size);
+	return (s_dup);
 }

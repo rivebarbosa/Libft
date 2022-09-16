@@ -6,20 +6,13 @@
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 20:54:43 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/09/15 20:43:17 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/16 20:12:42 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_toupper(int c)
-{
-	return ((65 <= c) && (90 >= c));
-}
-
 int	ft_tolower(int c)
 {
-	if (ft_toupper(c))
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }

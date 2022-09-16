@@ -6,20 +6,19 @@
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 13:00:40 by roberto           #+#    #+#             */
-/*   Updated: 2022/09/16 18:32:22 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/16 18:40:43 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *b, size_t n)
 {
-	int	*cln;
+	unsigned char	*dest;
+	size_t			i;
 
-	cln = s;
-	while (n != 0)
-	{
-		*cln++ = 0;
-		n--;
-	}
+	dest = b;
+	i = 0;
+	while (i++ < n)
+		*dest++ = 0;
 }

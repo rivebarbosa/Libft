@@ -6,7 +6,7 @@
 #    By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/12 19:58:03 by rrivelin          #+#    #+#              #
-#    Updated: 2022/09/15 19:43:01 by rrivelin         ###   ########.fr        #
+#    Updated: 2022/09/16 20:03:22 by rrivelin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,12 +26,15 @@ FILES = ft_atoi \
         ft_isdigit \
         ft_isprint \
         ft_itoa \
+        ft_memchr \
+        ft_memcmp \
         ft_memcpy \
         ft_memmove \
         ft_memset \
         ft_strlcat \
         ft_strlcpy \
         ft_strlen \
+        ft_isprint \
         ft_tolower \
         ft_toupper \
 
