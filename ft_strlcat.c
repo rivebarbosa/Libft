@@ -6,7 +6,7 @@
 /*   By: rrivelin <rrivelin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 21:22:55 by rrivelin          #+#    #+#             */
-/*   Updated: 2022/09/16 20:47:22 by rrivelin         ###   ########.fr       */
+/*   Updated: 2022/09/16 20:48:52 by rrivelin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[size_count] = '\0';
 	return (size_count);
 }
-size_t	ft_strlcpy(char *dst, const char *src, size_t maxlen)
-{
-	size_t	src_size;
+// size_t	ft_strlcpy(char *dst, const char *src, size_t maxlen)
+// {
+// 	size_t	src_size;
 
-	src_size = ft_strlen(src);
-	if (src_size < maxlen)
-		ft_memcpy(dst, src, src_size + 1);
-	else if (maxlen != 0)
-	{
-		ft_memcpy(dst, src, maxlen);
-		dst[maxlen - 1] = 0;
-	}
-	return (src_size);
-}
+// 	src_size = ft_strlen(src);
+// 	if (src_size < maxlen)
+// 		ft_memcpy(dst, src, src_size + 1);
+// 	else if (maxlen != 0)
+// 	{
+// 		ft_memcpy(dst, src, maxlen);
+// 		dst[maxlen - 1] = 0;
+// 	}
+// 	return (src_size);
+// }
